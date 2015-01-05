@@ -13,7 +13,7 @@ Example
 <p>import (</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;"flag"</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;"fmt"</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;"transform"</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;"github.com/go-4-mysql-tableinfo-master"</p>
 <p>)</p>
 
 
