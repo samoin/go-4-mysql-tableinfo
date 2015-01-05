@@ -7,7 +7,7 @@ i was trying to use golang to transform sql(export from db) to get create table 
 
 Example
 ====================
-
+<p>trans.go</p>
 <p>package main</p>
 
 <p>import (</p>
@@ -23,5 +23,7 @@ Example
 <p>&nbsp;&nbsp;&nbsp;&nbsp;result := transform.ReadTableInfoFromSql(file)</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;fmt.Println(result)</p>
 <p>}</p>
-
-
+====================
+Run
+====================
+go run trans.go /home/samoin/test.sql
