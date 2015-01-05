@@ -7,7 +7,7 @@ i was trying to use golang to transform sql(export from db) to get create table 
 
 Example
 ====================
-
+<code>
 <p>package main</p>
 
 <p>import (</p>
@@ -24,3 +24,4 @@ Example
 <p>&nbsp;&nbsp;fmt.Println(result)</p>
 <p>}</p>
 
+</code>
