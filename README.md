@@ -7,16 +7,15 @@ i was trying to use golang to transform sql(export from db) to get create table 
 
 Example
 ====================
-<code>
-package main
-</code>
-<code>
-import (<br/>
-	"flag"<br/><br/><br/>
-	"fmt"<br/><br/>
-	"transform"<br/>
-)<br/>
-</code>
+
+<p>package main</p>
+
+<p>import (</p>
+<p>	"flag"</p>
+<p>	"fmt"</p>
+<p>	"transform"</p>
+<p>)</p>
+
 
 func main() {
 	flag.Parse()
@@ -24,4 +23,4 @@ func main() {
 	result := transform.ReadTableInfoFromSql(file)
 	fmt.Println(result)
 }
-</code>
+
