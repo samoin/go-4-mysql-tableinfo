@@ -5,17 +5,18 @@ i was trying to use golang to transform sql(export from db) to get create table 
 
 ====================
 
-you can use this like this.
---------------------
+Example
+====================
 <code>
 package main
-
+</code>
+<code>
 import (
 	"flag"
 	"fmt"
 	"transform"
 )
-
+</code>
 
 func main() {
 	flag.Parse()
