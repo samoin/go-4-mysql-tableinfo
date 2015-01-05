@@ -189,6 +189,7 @@ func SetTableInfo(arr []string) []TableInfo {
 * 读取sql文件数中的据库表的信息(read all table info from a sql, exported from db, like mysql)
 */
 func ReadTableInfoFromSql(file string) []TableInfo {
-	str := transform.ReadByIoutil(file) 
-	return transform.SetTableInfo(transform.GetFristFitleArr(str))
+	str := ReadByIoutil(file) 
+	resultTableInfo := SetTableInfo(GetFristFitleArr(str))
+	return resultTableInfo
 }
