@@ -11,11 +11,11 @@ Example
 package main
 </code>
 <code>
-import (
-	"flag"
-	"fmt"
-	"transform"
-)
+import (<br/>
+	"flag"<br/><br/><br/>
+	"fmt"<br/><br/>
+	"transform"<br/>
+)<br/>
 </code>
 
 func main() {
