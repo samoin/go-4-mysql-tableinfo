@@ -94,6 +94,24 @@ type TableInfo struct {
 	*/
 	column []map[string]string `json:"column"`
 }
+/**
+* 返回表信息的表名(return the filed "name" of this TableInfo)
+*/
+func GetTableInfoName(t TableInfo) string{
+	return t.name
+}
+/**
+* 返回表信息的表的中文说明(return the filed "comment" of this TableInfo)
+*/
+func GetTableInfoComment(t TableInfo) string{
+	return t.comment
+}
+/**
+* 返回表信息的列对应的字段(return the filed "column" of this TableInfo)
+*/
+func GetTableInfoColumn(t TableInfo) []map[string]string{
+	return t.column
+}
 
 /**
 * 进行初始化的过滤，主要是：<br/>
@@ -186,10 +204,17 @@ func SetTableInfo(arr []string) []TableInfo {
 }
 
 /**
-* 读取sql文件数中的据库表的信息(read all table info from a sql, exported from db, like mysql)
+* 读取sql文件数中的据库表的信息(read all table info from a sql file, exported from db, like mysql)
 */
 func ReadTableInfoFromSql(file string) []TableInfo {
 	str := ReadByIoutil(file) 
+	resultTableInfo := SetTableInfo(GetFristFitleArr(str))
+	return resultTableInfo
+}
+/**
+* 读取sql文本的据库表的信息(read all table info from a sql text, exported from db, like mysql)
+*/
+func ReadTableInfoFromSqlInfo(str string) []TableInfo {
 	resultTableInfo := SetTableInfo(GetFristFitleArr(str))
 	return resultTableInfo
 }
