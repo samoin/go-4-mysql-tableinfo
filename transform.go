@@ -118,7 +118,6 @@ func GetTableInfoColumn(t TableInfo) []map[string]string{
 * 1.替换特殊字符"`"<br/>
 * 2.根据特殊关键词"CREATE TABLE"，进行打散到数组<br/>
 * 3.根据";"打散到数组，并返回对应数组的第一个元素<br/>
-* <font color=red>注意：如果通过正常导出的sql文件，在执行后，返回数组的第一个元素不是实际的库表信息内容</font><br/>
 */
 func GetFristFitleArr(sql string) (index []string) {
 	specialReg, err := regexp.Compile("`")
