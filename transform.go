@@ -197,6 +197,10 @@ func SetTableInfo(arr []string) []TableInfo {
 					columnArr[i2]["constraint"] = "PRIMARY KEY ; " + columnArr[i2]["constraint"]
 				}
 			}
+			//移除第一个空的元素
+			if len(tbInfo.column) > 1 && tbInfo.column[0] == nil {
+				tbInfo.column = tbInfo.column[1:len(tbInfo.column)]
+			}
 			resultTableInfo[i-1] = tbInfo
 		}
 	}
